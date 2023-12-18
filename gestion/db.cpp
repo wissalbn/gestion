@@ -8,6 +8,7 @@
 #include "client.h"
 #include <QMainWindow>
 #include <QApplication>
+#include "categorie.h"
 
 #include <Qdir>
 #include <QFileInfo>
@@ -33,8 +34,11 @@ Db::Db(QWidget *parent)
             qDebug() << "Base de données ouverte avec succès.";
             /*Commandes c(db);
             c.creerTableCommandes();*/
-            Client c(db);
-            c.creerTableClient();
+          //  Client c(db);
+           // c.creerTableClient();
+            Categorie a(db);
+            a.creerCategorie();
+
 
 
         } else {
