@@ -5,6 +5,7 @@
 #include <QtSql/QSql>
 #include <QSqlDatabase>
 #include "commandes.h"
+#include "client.h"
 #include <QMainWindow>
 #include <QApplication>
 
@@ -30,8 +31,11 @@ Db::Db(QWidget *parent)
         // Ouvrez la base de données
         if (db.open()) {
             qDebug() << "Base de données ouverte avec succès.";
-            Commandes c(db);
-            c.creerTableCommandes();
+            /*Commandes c(db);
+            c.creerTableCommandes();*/
+            Client c(db);
+            c.creerTableClient();
+
 
         } else {
             qDebug() << "Erreur lors de l'ouverture de la base de données:";
