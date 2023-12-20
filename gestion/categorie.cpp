@@ -18,12 +18,11 @@ Categorie::Categorie(const QSqlDatabase &database)
 void Categorie::creerCategorie()
 {
     QSqlQuery query;
-    if (query.exec("CREATE TABLE IF NOT EXISTS clients (id_categorie INT PRIMARY KEY,nom_categorie "
-                   "TEXT)")) {
-        qDebug() << "Table 'clients' créée avec succès.";
-        query.exec("INSERT INTO commandes VALUES(1,'Sport')");
-        query.exec("INSERT INTO commandes VALUES(2,'Beauté')");
-        query.exec("INSERT INTO commandes VALUES(3,'Electronique')");
+    if (query.exec("CREATE TABLE IF NOT EXISTS categories (id_categorie INT PRIMARY KEY,nom_categorie TEXT)")) {
+        qDebug() << "Table 'categories' créée avec succès.";
+        query.exec("INSERT INTO categories VALUES(1,'Sport')");
+        query.exec("INSERT INTO categories VALUES(2,'Beauté')");
+        query.exec("INSERT INTO categories VALUES(3,'Electronique')");
         qDebug() << "valeurs insérés!";
     }
 

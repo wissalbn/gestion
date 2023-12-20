@@ -8,7 +8,7 @@
 #include "client.h"
 #include <QMainWindow>
 #include <QApplication>
-#include "categorie.h"
+#include "produit.h"
 
 #include <Qdir>
 #include <QFileInfo>
@@ -36,8 +36,10 @@ Db::Db(QWidget *parent)
             c.creerTableCommandes();*/
           //  Client c(db);
            // c.creerTableClient();
-            Categorie a(db);
-            a.creerCategorie();
+            /*Categorie a(db);
+            a.creerCategorie();*/
+            Produit p(db);
+            p.creerTableProduit();
 
 
 
