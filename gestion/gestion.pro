@@ -13,15 +13,18 @@ SOURCES += \
     client.cpp \
     commandes.cpp \
     main.cpp \
-    db.cpp
+    db.cpp \
+    produit.cpp
 
 HEADERS += \
     categorie.h \
     client.h \
     commandes.h \
-    db.h
+    db.h \
+    produit.h
 
 FORMS += \
+    categorie.ui \
     db.ui
 
 # Default rules for deployment.
