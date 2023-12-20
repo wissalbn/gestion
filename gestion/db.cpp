@@ -33,8 +33,8 @@ Db::Db(QWidget *parent)
             qDebug() << "Base de données ouverte avec succès.";
             /*Commandes c(db);
             c.creerTableCommandes();*/
-            Client c(db);
-            c.creerTableClient();
+            /*Client c(db);
+            c.creerTableClient();*/
 
 
         } else {

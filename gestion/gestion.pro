@@ -10,16 +10,19 @@ CONFIG += c++17
 
 SOURCES += \
     client.cpp \
+    commande.cpp \
     commandes.cpp \
     main.cpp \
     db.cpp
 
 HEADERS += \
     client.h \
+    commande.h \
     commandes.h \
     db.h
 
 FORMS += \
+    commande.ui \
     db.ui
 
 # Default rules for deployment.
