@@ -16,12 +16,13 @@ void Commandes::creerTableCommandes()
 {
 
     QSqlQuery query;
-    if (query.exec("CREATE TABLE IF NOT EXISTS commandes (numCmd INT PRIMARY KEY,dateCmd TEXT, montant REAL)")) {
-        { qDebug() << "Table 'commandes' créée avec succès.";
-            query.exec("INSERT INTO commandes VALUES(1,'12/05/2009',200.33)");
-            qDebug()<<"valeurs insérés!";}
-
-    } else {
+    if (query.exec("CREATE TABLE IF NOT EXISTS commandes (numCmd INT PRIMARY KEY, datCmd TEXT,Idclient INT,montant REAL,etat TEXT,FOREIGN KEY(Idclient) REFERENCES clients(idClient))"))
+    {
+        //query.exec("INSERT INTO commandes (numCmd, datCmd, Idclient, montant, etat) VALUES (5, '2023-01-05', 105, 90.0, 'Livré')");
+    }
+     else {
         qDebug() << "Erreur lors de la création de la table 'commandes':";
     }
+    //if (query.exec("CREATE TABLE IF NOT EXISTS commandes (numCmd INT PRIMARY KEY, datCmd TEXT,Idclient INT,montant REAL,etat TEXT,FOREIGN KEY(Idclient) REFERENCES clients(idClient))"))
+    //{}
 }

@@ -9,22 +9,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    categorie.cpp \
     client.cpp \
+    commande.cpp \
     commandes.cpp \
     main.cpp \
-    db.cpp \
-    produit.cpp
+    db.cpp
 
 HEADERS += \
-    categorie.h \
     client.h \
+    commande.h \
     commandes.h \
-    db.h \
-    produit.h
+    db.h
 
 FORMS += \
-    categorie.ui \
+    commande.ui \
     db.ui
 
 # Default rules for deployment.
