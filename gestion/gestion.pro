@@ -13,17 +13,30 @@ SOURCES += \
     commande.cpp \
     commandes.cpp \
     main.cpp \
-    db.cpp
+    db.cpp \
+    admin.cpp \
+    categorie.cpp \
+    clientwindow.cpp \
+    login.cpp \
+    produit.cpp
 
 HEADERS += \
     client.h \
     commande.h \
     commandes.h \
-    db.h
+    db.h \
+    admin.h \
+    categorie.h \
+    clientwindow.h \
+    login.h \
+    produit.h
 
 FORMS += \
     commande.ui \
-    db.ui
+    db.ui \
+    categorie.ui \
+    clientwindow.ui \
+    login.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
